@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='tarls-app'>
+<head>
+	<!-- <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/paper-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<title>Tarley is Fass</title>
+</head>
+<body>
+	
+	<nav class='navbar navbar-default'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				 <a class="navbar-brand ion-social-facebook" href="#">acebook</a>
+			</div>
+			<ul class="nav navbar-nav navbar-left">
+        <li><a ng-href="#/login">Login</a></li>
+      </ul>
+		</div>
+	</nav>	
+	
+	<div ui-view></div>
+	
+  <div id="fb-root"></div>
+
+
+
+	<script type="text/javascript" src='/bower_components/angular/angular.min.js'></script>
+	<script type="text/javascript" src='/bower_components/angular-messages/angular-messages.min.js'></script>
+	<script type="text/javascript" src='/bower_components/angular-ui-router/release/angular-ui-router.js'></script>
+	<script type="text/javascript" src='app.js'></script>
+	<script type="text/javascript" src='controllers/fbCtrl.js'></script>
+
+
+</body>
+</html>

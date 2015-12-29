@@ -1,0 +1,23 @@
+{
+  "name": "tarley-fass",
+  "authors": [
+    "Ryan Hamblin <ryanhca@gmail.com>"
+  ],
+  "description": "a simple login page with fb sdk integration",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "YUM",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
