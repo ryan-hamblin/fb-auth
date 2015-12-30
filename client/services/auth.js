@@ -1,6 +1,6 @@
 angular.module('tarls-app.authService', [])
 
-	.factory('authService', function($firebase){
+	.factory('authService', function($firebase, $q){
 
 		var FBdata = {};
 		var FBlogin = function(){
@@ -15,6 +15,31 @@ angular.module('tarls-app.authService', [])
 			});
 		};
 
+     var getPhoto = function() {
+          var deferred = $q.defer();
+          FB.api('/me/picture', function(response) {
+              if (!response || response.error) {
+                  deferred.reject('Error occured');
+              } else {
+                  deferred.resolve(response);
+              }
+          });
+          return deferred.promise;
+      }
+
+     var getProfile = function(){
+     	var deferred = $q.defer();
+     	FB.api('/me', function(response){
+     		if(!response || response.error){
+     			deferred.reject('Error occured');
+     		}else{
+     			deferred.resolve(response);
+     		}
+     	});
+     	return deferred.promise;
+     }
+    
+
 		// var userStore = function(user){
 		// 	var ref = new Firebase('https://tarley-fass.firebaseio.com');
 
@@ -24,6 +49,8 @@ angular.module('tarls-app.authService', [])
 		// };
 		return {
 			FBlogin: FBlogin,
-			FBdata: FBdata
+			FBdata: FBdata,
+			getPhoto: getPhoto,
+			getProfile: getProfile
 		}
 	});

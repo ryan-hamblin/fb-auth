@@ -1,8 +1,6 @@
 angular.module('tarls-app')
 
 	.controller('fbCtrl', function($scope, $window, authService, $location){
-		$scope.user = {};
-
 		$scope.fbLogin = function(){
 			authService.FBlogin()
 			
@@ -13,6 +11,6 @@ angular.module('tarls-app')
 		};
 
 		$scope.login = function(){
-			
+
 		}
 	});
