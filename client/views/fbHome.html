@@ -1,9 +1,9 @@
-<button type='button' ng-click='loader()' class='btn btn-default'>Click to see Last Name</button>
+<button type='button' ng-click='loader()' class='btn btn-pretty'>Show FB User Profile</button>
 
 <div ng-show='showProfile'>
 	<img src="{{ picture }}"></img>
-	<p>{{ full_name }}</p>
-
+	<a href='{{ fb_link }}'>{{ full_name }}</a>
+	<p>{{ about }}</p>
 </div>
 
 <p> this is the fbHome Page</p>
